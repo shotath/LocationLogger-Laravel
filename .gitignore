@@ -1,0 +1,16 @@
+.DS_Store
+
+.vagrant
+
+/vendor
+/node_modules
+/public/storage
+bootstrap/cache/
+
+Homestead.yaml
+Homestead.json
+
+.env
+.env.*.php
+.env.php
+.env.example
