@@ -17,7 +17,14 @@ class CreateLocationsTable extends Migration
             $table->double('latitude', 8, 6);
             $table->double('longitude', 9, 6);
             $table->timestamp('located_at');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
+
+            $table
+                ->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
